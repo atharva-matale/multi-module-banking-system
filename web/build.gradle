@@ -1,0 +1,8 @@
+plugins { id 'application' }
+dependencies { implementation project(':service') }
+application { mainClass = 'com.bank.web.BankingApplication' }
+jar {
+    manifest { attributes 'Main-Class': application.mainClass.get() }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+}

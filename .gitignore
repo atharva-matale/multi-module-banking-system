@@ -1,0 +1,21 @@
+# Gradle build cache & binary artifacts
+.gradle/
+build/
+**/build/
+bin/
+**/bin/
+out/
+**/out/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS / Logs
+.DS_Store
+Thumbs.db
+*.log
